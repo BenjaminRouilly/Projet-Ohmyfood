@@ -56,7 +56,8 @@ header {
   text-decoration: none;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--black);
 }
 
@@ -101,6 +102,7 @@ article {
 .margin_btn {
   margin-top: 15px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .restaurant_img {
@@ -135,6 +137,7 @@ article {
   color: white;
   font-weight: 300;
   font-size: 20px;
+  margin: 20px;
 }
 
 .ul_footer {
@@ -142,6 +145,7 @@ article {
   flex-direction: column;
   justify-content: center;
   padding-left: 0px;
+  margin: 20px;
 }
 
 .functioning_card {
@@ -157,7 +161,19 @@ article {
   box-shadow: 0px 5px 6px 2px #B3B3B3;
 }
 
+.fa_margin {
+  margin: 25px;
+}
+
 /* Pages restaurants */
+.header_arrow {
+  /*     position: absolute;
+  top: 50%;
+  left: 20px; */
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
 .banner {
   display: block;
 }
@@ -167,6 +183,23 @@ article {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
+}
+
+.h1_shrikhand {
+  font-family: "Shrikhand", serif;
+  font-size: 1.75rem;
+}
+
+.h1_margin {
+  margin: 20px;
+}
+
+.menu_container {
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  margin-top: -40px;
+  padding-bottom: 75px;
 }
 
 .menu_bar {
@@ -179,6 +212,16 @@ article {
   position: relative;
   margin-bottom: 27px;
   font-weight: 500;
+  margin: 20px;
+}
+
+.hr_bar {
+  width: 14%;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  border: none;
+  margin: 0;
+  margin-top: 0.5rem;
 }
 
 .menu_lists {
@@ -194,19 +237,34 @@ article {
   background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
-  height: 67px;
+  height: 70px;
   cursor: pointer;
 }
 
-/* .card_menu_info {
-    flex-shrink: 0;
-    display: grid;
-    gap: 10%;
-    width: 100%;
-    padding: 12px;
-    align-self: center; 
-}*/
+.card_menu_info {
+  display: flex;
+  gap: 10%;
+  width: 100%;
+  padding: 12px;
+  align-self: center;
+  justify-content: space-between;
+}
+
 /* Media query pour que les cartes des restaurants gardent une bonne forme*/
+.btn_command {
+  width: 50%;
+  border: 0;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 60px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  cursor: pointer;
+  box-shadow: 0px 5px 6px 2px #B3B3B3;
+}
+
 @media only screen and (min-width: 768px) {
   .restaurant_card {
     width: 48%;
@@ -221,6 +279,14 @@ article {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 18px;
+  }
+}
+@media only screen and (min-width: 1085px) {
+  .title_footer {
+    text-align: center;
+  }
+  .ul_footer {
+    align-items: center;
   }
 }
 

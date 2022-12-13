@@ -12,9 +12,13 @@
 
 <body>
     <!-- LOADER -->
-    <div class="loader"></div>
+    <div class="loader-wrapper">
+        <div class="loader">
+        </div>
+    </div>
 
     <!-- HEADER -->
+    <div class="main_global">
     <header class="header">
         <img src="images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
     </header>
@@ -37,7 +41,7 @@
 
         <!-- FONCTIONNEMENT -->
         <section>
-            <h2>Fonctionnement</h2>
+            <h2 id="h2_functioning">Fonctionnement</h2>
             <ul>
                 <li class="functioning_card">
                     <span class="circle">1</span>
@@ -71,9 +75,10 @@
                                 <h3>La palette du goût</h3>
                                 <p>Ménilmontant</p>
                             </div>
-                            <div>
+                            <span class="heart_position">
                                 <span class="fa-regular fa-heart heart "></span>
-                            </div>
+                                <span class="fa-solid fa-heart heart_full "></span>
+                            </span>
                         </div>
                     </a>
                 </article>
@@ -88,9 +93,10 @@
                                 <h3>La note enchantée</h3>
                                 <p>Charonne</p>
                             </div>
-                            <div>
+                            <span class="heart_position">
                                 <span class="fa-regular fa-heart heart "></span>
-                            </div>
+                                <span class="fa-solid fa-heart heart_full "></span>
+                            </span>
                         </div>
                     </a>
                 </article>
@@ -104,9 +110,10 @@
                                 <h3>A la française</h3>
                                 <p>Cité Rouge</p>
                             </div>
-                            <div>
+                            <span class="heart_position">
                                 <span class="fa-regular fa-heart heart "></span>
-                            </div>
+                                <span class="fa-solid fa-heart heart_full "></span>
+                            </span>
                         </div>
                     </a>
                 </article>
@@ -121,15 +128,17 @@
                                 <h3>Le délice des sens</h3>
                                 <p>Folie-Méricourt</p>
                             </div>
-                            <div>
+                            <span class="heart_position">
                                 <span class="fa-regular fa-heart heart "></span>
-                            </div>
+                                <span class="fa-solid fa-heart heart_full "></span>
+                            </span>
                         </div>
                     </a>
                 </article>
             </div>
         </section>
     </main>
+</div>
 
     <footer>
         <div class="footer_container">

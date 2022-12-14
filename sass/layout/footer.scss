@@ -1,0 +1,26 @@
+.footer_container {
+    background-color: #353535;
+    color: white;
+    padding: 10px;
+
+
+    .title_footer {
+        font-family: Shrikhand;
+        color: white;
+        font-weight: 300;
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .ul_footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0px;
+        margin: 20px;
+    }
+
+    .fa_footer {
+        margin-right: 5px;
+    }
+}

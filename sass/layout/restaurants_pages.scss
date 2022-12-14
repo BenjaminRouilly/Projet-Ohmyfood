@@ -1,0 +1,189 @@
+@keyframes text_apparition {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.starters {
+    animation: text_apparition 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.main_courses {
+    animation: text_apparition 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.desserts {
+    animation: text_apparition 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.dish_name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.side_dish {
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: calc(100% - 100px);
+}
+
+.animated_part {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.check {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner {
+    display: block;
+}
+
+.banner_img {
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.menu_container {
+    position: relative;
+    background-color: #f6f6f6;
+    border-radius: 40px 40px 0 0;
+    margin-top: -40px;
+    padding-bottom: 75px;
+    padding: 20px;
+}
+
+.menu_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_title {
+    position: relative;
+    margin-bottom: 27px;
+    font-weight: 500;
+}
+
+.hr_bar {
+    margin-top: 5px;
+    width: 50px;
+    margin-bottom: 20px;
+    border-bottom: solid 2px #99E2D0;
+
+}
+
+.menu_lists {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@keyframes price {
+    0% {
+        transform: translate(0px);
+    }
+
+    100% {
+        transform: translate(-20px);
+    }
+}
+
+@keyframes checkbox {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.card_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 12px 12px -7px #ABABAB;
+    overflow-x: hidden;
+
+    &:hover {
+        .animated_right_part {
+            transform: translateX(0);
+
+            animation-duration: 0.8s;
+        }
+
+        .price {
+            animation: price;
+            animation-duration: 0.8s;
+            animation-fill-mode: forwards;
+        }
+
+        .check {
+            animation: checkbox 1s;
+            animation-delay: 0.2s;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+.card_text {
+    padding: 10px 0px;
+    width: 100%;
+    h3 {
+        margin: 2px 0px 2px 10px;
+    }
+    p {
+        margin: 2px 0px 2px 10px;
+    }
+}
+
+.animated_right_part {
+    background-color: #99e2d0;
+    display: flex;
+    padding: 35px 0px;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+    transform: translateX(55px);
+    height: 50px;
+    width: 50px;
+
+}

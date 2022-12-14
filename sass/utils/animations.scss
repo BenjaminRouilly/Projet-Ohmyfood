@@ -1,0 +1,96 @@
+
+.main_global {
+	animation-name: fade-in;
+	animation-duration: 0.6s;
+	animation-delay: 3s;
+	animation-timing-function: cubic-bezier();
+	animation-iteration-count: 1;
+	animation-fill-mode: both;
+	opacity: 0;
+	margin: auto;
+}
+
+@keyframes fade-in {
+    0% {
+      opacity: 0%;
+    }
+  
+    100% {
+      opacity: 100%;
+    }
+  }
+
+/** Tutoriel LOADER *https://www.youtube.com/@getCodingKnowledge*/
+.loader {
+    border-top: 10px solid $color-primary;
+    border-bottom: 10px solid $color-secondary;
+    border-left: 10px solid $color-tertiary;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 3s linear;
+    -o-animation: spin 3s linear;
+    animation: spin 3s linear;
+    margin: auto;
+    position: fixed;    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+
+@keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
+
+.loader-wrapper {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
+	animation-name: fade-out;
+	animation-duration: 0.6s;
+	animation-delay: 3s;
+	animation-timing-function: cubic-bezier();
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    80% {
+        -webkit-transform: rotate(360deg);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

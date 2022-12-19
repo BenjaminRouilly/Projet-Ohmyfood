@@ -3,7 +3,7 @@
   animation-name: fade-in;
   animation-duration: 0.6s;
   animation-delay: 3s;
-  animation-timing-function: cubic-bezier();
+  animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
   animation-iteration-count: 1;
   animation-fill-mode: both;
   opacity: 0;
@@ -59,7 +59,7 @@
   animation-name: fade-out;
   animation-duration: 0.6s;
   animation-delay: 3s;
-  animation-timing-function: cubic-bezier();
+  animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -566,15 +566,15 @@ h3 {
     flex-direction: row;
     gap: 18px;
   }
-}
-/* --DESKTOP-- */
-@media only screen and (min-width: 1024px) {
   .title_footer {
     text-align: center;
   }
   .ul_footer {
     align-items: center;
   }
+}
+/* --DESKTOP-- */
+@media only screen and (min-width: 1024px) {
   .global_menu {
     display: flex;
     justify-content: space-around;

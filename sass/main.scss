@@ -187,10 +187,6 @@ h3 {
         flex-direction: row;
         gap: 18px;
     }
-}
-
-/* --DESKTOP-- */
-@media only screen and (min-width:1024px) {
 
     .title_footer {
         text-align: center;
@@ -199,6 +195,10 @@ h3 {
     .ul_footer {
         align-items: center;
     }
+}
+
+/* --DESKTOP-- */
+@media only screen and (min-width:1024px) {
 
     .global_menu {
         display: flex;

@@ -393,7 +393,6 @@ h2.menu_title::before {
   animation: go_left 1s;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
-  /*             width: calc(100% - 40px); */
 }
 
 .price {

@@ -54,12 +54,14 @@
 
 .loader-wrapper {
 	position: fixed;
-	width: 100vw;
+/* width: 100vw;
 	height: 100vh;
-	display: flex;
+  background: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));  
+  */
+	display: grid;
+  z-index: 1;
 	justify-content: center;
 	align-items: center;
-	background: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
 	animation-name: fade-out;
 	animation-duration: 0.6s;
 	animation-delay: 3s;

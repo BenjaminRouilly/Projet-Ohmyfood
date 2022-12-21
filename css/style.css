@@ -50,12 +50,14 @@
 }
 .loader-wrapper {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
+  /* width: 100vw;
+  	height: 100vh;
+    background: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));  
+    */
+  display: grid;
+  z-index: 1;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   animation-name: fade-out;
   animation-duration: 0.6s;
   animation-delay: 3s;
@@ -255,15 +257,18 @@ header .header_arrow {
 
 /* --ANIMATION PAGES RESTAURANTS-- */
 .dish_name {
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   font-weight: bold;
-  font-size: 20px;
 }
 
 .side_dish {
   font-size: 15px;
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   max-width: calc(100% - 100px);
 }
 
@@ -309,17 +314,20 @@ header .header_arrow {
   align-items: center;
 }
 
+h2.menu_title::before {
+  content: "";
+  background-color: #99e2d0;
+  height: 3px;
+  width: 60px;
+  position: absolute;
+  bottom: 0;
+}
+
 .menu_title {
   position: relative;
   margin-bottom: 27px;
   font-weight: 500;
-}
-
-.hr_bar {
-  margin-top: 5px;
-  width: 50px;
-  margin-bottom: 20px;
-  border-bottom: solid 2px #99E2D0;
+  padding-bottom: 10px;
 }
 
 .menu_lists {
@@ -347,6 +355,15 @@ header .header_arrow {
     transform: rotate(360deg);
   }
 }
+@keyframes go_left {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(-20px);
+    margin-left: 20px;
+  }
+}
 .card_menu {
   display: flex;
   align-items: center;
@@ -372,10 +389,25 @@ header .header_arrow {
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
+.card_menu:hover .card_text {
+  animation: go_left 1s;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  /*             width: calc(100% - 40px); */
+}
+
+.price {
+  font-weight: bold;
+}
 
 .card_text {
   padding: 10px 0px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card_text h3 {
   margin: 2px 0px 2px 10px;
@@ -488,6 +520,9 @@ h3 {
   text-decoration: none;
   background-color: #e4d5f6;
 }
+.functioning_card:hover i {
+  color: #9356DC;
+}
 
 .circle {
   background-color: #9356DC;
@@ -578,7 +613,6 @@ h3 {
   .global_menu {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     gap: 2%;
   }
   .starters,
